@@ -5151,3 +5151,39 @@ zoominfo:
     token_request_auth_method: custom
     body_format: json
     docs: https://docs.nango.dev/integrations/all/zoominfo
+
+ghost-content:
+    displayName: Ghost (Content)
+    auth_mode: API_KEY
+    categories:
+        - cms
+    proxy:
+        base_url: https://${connectionConfig.domain}/ghost/api/content
+        query:
+            key: ${apiKey}
+    docs: https://docs.nango.dev/integrations/all/ghost
+    connection_config:
+        domain:
+            type: string
+            title: Domain
+            description: The domain of your Ghost website.
+            example: demo.ghost.io
+            format: hostname
+
+ghost-admin:
+    displayName: Ghost (Admin)
+    auth_mode: API_KEY
+    categories:
+        - cms
+    proxy:
+        base_url: https://${connectionConfig.domain}/ghost/api/admin
+        headers:
+            Authorization: Ghost ${apiKey}
+    docs: https://docs.nango.dev/integrations/all/ghost
+    connection_config:
+        domain:
+            type: string
+            title: Domain
+            description: The domain of your Ghost website.
+            example: demo.ghost.io
+            format: hostname
