@@ -3,7 +3,7 @@ title: Ghost
 sidebarTitle: Ghost
 ---
 
-API configuration: [`ghost`](https://nango.dev/providers.yaml)
+API configuration: [`ghost-content`](https://nango.dev/providers.yaml), [`ghost-admin`](https://nango.dev/providers.yaml)
 
 ## Features
 
@@ -19,6 +19,7 @@ API configuration: [`ghost`](https://nango.dev/providers.yaml)
 
 ## Getting started
 
+-   [Ghost Content API docs](https://ghost.org/docs/content-api/)
 -   [Ghost Admin API docs](https://ghost.org/docs/admin-api/)
 -   [Authentication and API key](https://ghost.org/docs/admin-api/#authentication)
 
@@ -26,8 +27,6 @@ API configuration: [`ghost`](https://nango.dev/providers.yaml)
 
 ## API gotchas
 
-- This only supports Ghost Token authentication which uses API_KEY auth mode with Authorization: Ghost `api_key` in the request header to access different endpoints.
-- Both `/content` and `/admin` api endpoint can be accessed.
-- Use 
+- You need to use Content API Key when using `ghost-content` API, and Admin API Key when using `ghost-admin` API.
 
 <Note>Add Getting Started links and Gotchas by [editing this page](https://github.com/nangohq/nango/tree/master/docs-v2/integrations/all/ghost.mdx)</Note>
